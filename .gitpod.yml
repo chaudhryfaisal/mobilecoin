@@ -1,0 +1,20 @@
+image: mobilecoin/builder-install:v0.0.32
+jetbrains:
+    intellij:
+        prebuilds:
+            version: both
+#        plugins:
+#            - zielu.gittoolbox
+#            - izhangzhihao.rainbow.brackets
+
+ports:
+    - name: Website
+      port: 3000
+      onOpen: open-preview
+    - name: VNC
+      description: full GUI Virtual Desktop
+      port: 6080
+      onOpen: open-browser
+    - name: Server
+      port: 10000
+      onOpen: ignore
